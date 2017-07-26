@@ -1,0 +1,193 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ggr.ssm</groupId>
+  <artifactId>ssm</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>ssm</name>
+  <url>http://maven.apache.org</url>
+
+    <!--版本控制-->
+    <properties>
+        <spring-version>4.3.7.RELEASE</spring-version>
+        <!--阿里driud版本-->
+        <driud-version>1.0.22</driud-version>
+        <mybatis-verson>3.4.2</mybatis-verson>
+        <spring-mybatis>1.3.0</spring-mybatis>
+        <jstl-version>1.2</jstl-version>
+        <!--json支持-->
+        <jackson-core-version>2.7.4</jackson-core-version>
+        <mysql-connector-version>5.1.27</mysql-connector-version>
+        <servlet-api-version>3.0-alpha-1</servlet-api-version>
+        <log4j-version>1.2.17</log4j-version>
+        <!--数据校验规范及其实现-->
+        <validation-version>1.1.0.Final</validation-version>
+        <validation-impl-version>5.3.5.Final</validation-impl-version>
+        <fileupload-version>1.3.3</fileupload-version>
+        <commonio-version>2.5</commonio-version>
+        <aspectJ-version>1.8.9</aspectJ-version>
+    </properties>
+
+    <dependencies>
+        <!--spring核心容器-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <!--事务模块依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <!--测试模块依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+
+        <!--Aop 支持-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectJ-version}</version>
+        </dependency>
+
+        <!--spring mvc-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+
+        <!--servlet api支持-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${servlet-api-version}</version>
+        </dependency>
+
+        <!--引入jstl标签支持-->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl-version}</version>
+        </dependency>
+
+        <!--引入json支持,版本不宜过低-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson-core-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-core-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson-core-version}</version>
+        </dependency>
+
+        <!--引入mybatis支持-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis-verson}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${spring-mybatis}</version>
+        </dependency>
+
+        <!--数据库连接-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.3.0.RELEASE</version>
+        </dependency>
+        <!-- 阿里 druid 数据库连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${driud-version}</version>
+        </dependency>
+
+        <!--数据校验-->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${validation-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${validation-impl-version}</version>
+        </dependency>
+
+        <!--文件上传依赖-->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>${fileupload-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commonio-version}</version>
+        </dependency>
+
+        <!--日志配置-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j-version}</version>
+        </dependency>
+    </dependencies>
+  <build>
+    <finalName>ssm</finalName>
+  </build>
+</project>
